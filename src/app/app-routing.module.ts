@@ -16,7 +16,8 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'creation', loadChildren: './creation/creation.module#CreationPageModule' },
-  { path: 'voir', loadChildren: './voir/voir.module#VoirPageModule' }
+  { path: 'voir', loadChildren: './voir/voir.module#VoirPageModule' },
+  { path: 'list/:mois', loadChildren: './mois/mois.module#MoisPageModule' }
 ];
 
 @NgModule({

@@ -4,14 +4,14 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-            List
+            Liste des mois
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
-        <ion-item *ngFor="let item of items">
+        <ion-item *ngFor="let item of items" [routerLink]="['/list/', item.title]" routerDirection="forward">
             <ion-icon [name]="item.icon" slot="start"></ion-icon>
             {{item.title}}
             <div class="item-note" slot="end">

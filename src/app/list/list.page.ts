@@ -7,25 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
   private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
+  // private icons = [
+  //   'calendar',
+  //   'calendar',
+  //   'beer',
+  //   'football',
+  //   'basketball',
+  //   'paper-plane',
+  //   'american-football',
+  //   'boat',
+  //   'bluetooth',
+  //   'build'
+  // ];
+  private mois = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
   public items: Array<{ title: string; note: string; icon: string }> = [];
   constructor() {
-    for (let i = 1; i < 11; i++) {
+    for (let i = 0; i < 12; i++) {
       this.items.push({
-        title: 'Item ' + i,
+        title: this.mois[i],
         note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        icon: "calendar"
       });
     }
   }
